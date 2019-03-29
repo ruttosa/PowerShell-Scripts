@@ -127,19 +127,20 @@ Write-Host "Start: " + $scriptStartDate -ForegroundColor Yellow
 
 #Global Script Configurations
 $host.Runspace.ThreadOptions = "ReuseThread"
-$currentScriptPath = split-path -parent $MyInvocation.MyCommand.Definition
-$parentCurrentPath = split-path -parent $currentScriptPath
-$folderBase = $parentCurrentPath  + "\SharePoint DLL\"
-$logFileCreated = Get-Date -format 'yyyy_MM_dd_hhmm' 
-$Logfile = $currentScriptPath + '\' + $logFileCreated + "_log"
+#$currentScriptPath = split-path -parent $MyInvocation.MyCommand.Definition
+#$parentCurrentPath = split-path -parent $currentScriptPath
+#$currentScriptPathParent = split-path -parent $currentScriptPath
+#$folderBase = $currentScriptPathParent + "\SharePoint DLL\"
+#$logFileCreated = Get-Date -format 'yyyy_MM_dd_hhmm' 
+#$Logfile = $currentScriptPath + '\' + $logFileCreated + "_log"
 
 # Adding the Client Object Model Assemblies --> En caso de ser necesario    
-$sCSOMRuntimePath=$folderBase +  "Microsoft.SharePoint.Client.Runtime.dll"         
-$sCSOMPath=$folderBase +  "Microsoft.SharePoint.Client.dll"
-$sCSOMPath2=$folderBase +  "Microsoft.SharePoint.Client.WorkflowServices.dll"
-Add-Type -Path $sCSOMPath          
-Add-Type -Path $sCSOMPath2 
-Add-Type -Path $sCSOMRuntimePath   
+#$sCSOMRuntimePath=$folderBase +  "Microsoft.SharePoint.Client.Runtime.dll"         
+#$sCSOMPath=$folderBase +  "Microsoft.SharePoint.Client.dll"
+#$sCSOMPath2=$folderBase +  "Microsoft.SharePoint.Client.WorkflowServices.dll"
+#Add-Type -Path $sCSOMPath          
+#Add-Type -Path $sCSOMPath2 
+#Add-Type -Path $sCSOMRuntimePath   
 
 # Set Global Variables
 $siteUrl = Read-Host "Site URL"
