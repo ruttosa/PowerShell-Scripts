@@ -6,9 +6,9 @@ These are only used in case of not have installed the [SharePoint Online Client 
 
 **NOTE**: By default, all the scripts has commented the portion of code that loads the libraries on runtime, inside the *Global Script Configuration* region
 
-```
-##### Code Block
 
+##### Code Block
+```
 -- Files Path Configuration
 $currentScriptPath = split-path -parent $MyInvocation.MyCommand.Definition
 $parentCurrentPath = split-path -parent $currentScriptPath
